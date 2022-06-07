@@ -19,7 +19,8 @@ CREATE TABLE invoices (
     total_amount decimal,
     generated_at timestamp,
     payed_at timestamp,
-    medical_history_id int UNIQUE FOREIGN KEY REFERENCES medical_histories (id)
+    medical_history_id int,
+    UNIQUE FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
 
 CREATE TABLE treatments (
@@ -40,7 +41,9 @@ CREATE TABLE invoice_items (
 );
 
 CREATE TABLE medical_histories_treatments (
-    treatment_id  int REFERENCES treatments (id),
-    medical_history_id int REFERENCES medical_histories (id),
-    CONSTRAINT medical_histories_treatments_pk PRIMARY KEY (treatment_id, medical_history_id)
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    treatment_id int,
+    medical_history_id INT,
+    FOREIGN KEY (treatment_id) REFERENCES treatments (id),
+    FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
