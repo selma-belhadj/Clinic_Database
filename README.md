@@ -1,31 +1,26 @@
-# curriculum-databases-projects-template
-
-> This template should be used for database related projects at Microverse.
-> Generate your own repository, update this README and edit all files content while working on projects. You should not be adding any new files unless asked otherwise.
-
+# Database based on a diagram
 
 ## Getting Started
 
 This repository includes files with plain SQL that can be used to recreate a database:
 
-- Use [schema.sql](./schema.sql) to create all tables.
-- Use [data.sql](./data.sql) to populate tables with sample data.
-- Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
-
+- Use [schema_based_on_diagram.sql](./schema_based_on_diagram.sql) to create all tables.
 
 ## Authors
 
-👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+👤 **Solomon Hagan**
 
-👤 **Author2**
+- GitHub: [@Achilles-Dev](https://github.com/Achilles-Dev/)
+- Twitter: [@SoloAchilles](https://twitter.com/SoloAchilles/)
+- LinkedIn: [Solomon Hagan](https://www.linkedin.com/in/solomon-hagan-b51693138/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
+👤 **Selma Belhadj**
+
+- GitHub: [@selma-belhadj](https://github.com/selma-belhadj)
+- Twitter: [@Bel_Selma16](https://twitter.com/Bel_Selma16)
+- LinkedIn: [@selma-belhadj](https://www.linkedin.com/in/selma-belhadj/) linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
