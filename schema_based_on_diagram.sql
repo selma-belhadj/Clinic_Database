@@ -19,8 +19,8 @@ CREATE TABLE invoices (
     total_amount decimal,
     generated_at timestamp,
     payed_at timestamp,
-    medical_history_id int,
-    UNIQUE FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
+    medical_history_id int UNIQUE, 
+    FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
 
 CREATE TABLE treatments (
