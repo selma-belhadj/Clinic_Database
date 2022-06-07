@@ -19,7 +19,7 @@ CREATE TABLE invoices (
     total_amount decimal,
     generated_at timestamp,
     payed_at timestamp,
-    medical_history_id int UNIQUE, 
+    medical_history_id int unique,
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
 
@@ -47,3 +47,10 @@ CREATE TABLE medical_histories_treatments (
     FOREIGN KEY (treatment_id) REFERENCES treatments (id),
     FOREIGN KEY (medical_history_id) REFERENCES medical_histories (id)
 );
+
+CREATE INDEX idx_pat_med_history ON medical_histories(patient_id);
+CREATE INDEX idx_med_hist_invoice ON invoices(medical_history_id);
+CREATE INDEX idx_inv_inv_items ON invoice_items(invoice_id);
+CREATE INDEX idx_treat_inv_items ON invoice_items(treatment_id);
+CREATE INDEX idx_treat_med_hist_treatments ON medical_histories_treatments(treatment_id);
+CREATE INDEX idx_med_hist_med_hist_treatments ON medical_histories_treatments(medical_history_id);
